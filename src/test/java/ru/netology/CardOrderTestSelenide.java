@@ -13,7 +13,7 @@ public class CardOrderTestSelenide {
     void setUp() {
         Configuration.browser = "chrome";
     }
-
+    // Верное заполнение полей (с SCC селекторами)
     @Test
     public void shouldOrderCardWithCssSelectors() {
         open("http://localhost:9999");
@@ -23,6 +23,4 @@ public class CardOrderTestSelenide {
         $("button").click();
         $(".paragraph_theme_alfa-on-white").shouldHave(exactText("Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время."));
     }
-
-
 }
